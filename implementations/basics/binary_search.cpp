@@ -16,10 +16,6 @@
  * - Fast modular exponentiation for cryptography
  * - Calculating large powers in competitive programming
  * - Matrix exponentiation problems
- *
- * @param x base number
- * @param n exponent (can be very large)
- * @return x^n % mod
  */
 int power(int x, long long n) {
   const int mod = 1000000007; // 10^9 + 7
