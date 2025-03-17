@@ -9,7 +9,7 @@
  * How it works:
  * - Converts exponentiation into a series of squaring operations
  * - Uses the binary representation of the exponent to determine which powers to
- * include
+ *   include
  * - For example: 3^13 = 3^(1101₂) = 3^8 * 3^4 * 3^1
  *
  * Applications:

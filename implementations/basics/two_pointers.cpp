@@ -12,7 +12,7 @@
  * - Uses the two-pointer technique to efficiently count valid subarrays
  * - Maintains a sliding window with left (l) and right (r) pointers
  * - For each left pointer position, extends the right pointer as far as
- * possible while keeping the sum <= s
+ *   possible while keeping the sum <= s
  * - Time Complexity: O(n) - each element is added and removed at most once
  * - Space Complexity: O(n) - for storing the input array
  *

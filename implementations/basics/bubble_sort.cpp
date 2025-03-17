@@ -11,7 +11,7 @@
  *
  * Algorithm:
  * - In each iteration, compare adjacent elements and swap if they are in wrong
- * order
+ *   order
  * - After each pass, the largest element "bubbles up" to its correct position
  * - Time Complexity: O(n²) where n is the number of elements
  * - Space Complexity: O(n) for storing the array
