@@ -36,3 +36,7 @@
 
 # MacOS
 .DS_Store
+
+# Repository Specific
+main.cpp
+/main
