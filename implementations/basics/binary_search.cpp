@@ -17,6 +17,7 @@
  * - Calculating large powers in competitive programming
  * - Matrix exponentiation problems
  */
+
 int power(int x, long long n) {
   const int mod = 1000000007; // 10^9 + 7
 
