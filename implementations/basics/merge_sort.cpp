@@ -49,7 +49,7 @@ std::vector<int> merge(std::vector<int> &l, std::vector<int> &r) {
 std::vector<int> array; // Global array to store input
 
 // Recursive merge sort function
-std::vector<int> merge_sort(int l, int r) {
+std::vector<int> mergeSort(int l, int r) {
   // Base case: single element is already sorted
   if (l == r) {
     std::vector<int> single;
@@ -61,8 +61,8 @@ std::vector<int> merge_sort(int l, int r) {
   int mid = (l + r) >> 1; // Equivalent to (l + r) / 2
 
   // Recursively sort both halves
-  std::vector<int> left = merge_sort(l, mid);
-  std::vector<int> right = merge_sort(mid + 1, r);
+  std::vector<int> left = mergeSort(l, mid);
+  std::vector<int> right = mergeSort(mid + 1, r);
 
   // Merge the sorted halves
   return merge(left, right);
@@ -84,7 +84,7 @@ int32_t main() {
   }
 
   // Sort the array using merge sort
-  std::vector<int> ans = merge_sort(0, n - 1);
+  std::vector<int> ans = mergeSort(0, n - 1);
 
   // Print the sorted array
   for (int i = 0; i < n; i++) {

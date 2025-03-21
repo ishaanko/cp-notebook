@@ -22,7 +22,7 @@
  */
 
 // Find all divisors of a number
-std::vector<long long> get_divisors(long long n) {
+std::vector<long long> getDivisors(long long n) {
   std::vector<long long> divisors;
 
   // Find all divisors by checking up to sqrt(n)
@@ -53,7 +53,7 @@ int32_t main() {
   std::cin >> n >> k;
 
   // Get all divisors of n
-  std::vector<long long> divisors = get_divisors(n);
+  std::vector<long long> divisors = getDivisors(n);
 
   // Output the kth divisor or -1 if k is too large
   if (k > divisors.size()) {
