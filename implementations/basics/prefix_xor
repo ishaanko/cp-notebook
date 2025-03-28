@@ -1,0 +1,58 @@
+#include <iostream>
+
+/**
+ * Prefix XOR Implementation
+ *
+ * Problem Description:
+ * - Precompute XOR of elements to efficiently answer range XOR queries
+ * - Process multiple queries of the form "XOR of elements from index l to r"
+ *
+ * Algorithm:
+ * - Build a prefix XOR array where pref_xor[i] = XOR of elements from 1 to i
+ * - Answer range queries in O(1) using the property: XOR(l,r) = pref_xor[r] ^
+ * pref_xor[l-1]
+ * - Time Complexity: O(n) for preprocessing, O(1) per query
+ * - Space Complexity: O(n) for storing the prefix XORs
+ *
+ * Features:
+ * - Efficient for multiple range XOR queries
+ * - Uses the property that XOR is its own inverse operation
+ * - 1-indexed for simplicity
+ */
+
+const int N = 2e5 + 9;
+int pref_xor[N];
+int a[N];
+
+int32_t main() {
+  // Optimize input/output operations
+  std::ios_base::sync_with_stdio(0);
+  std::cin.tie(0);
+
+  // Read array size and number of queries
+  int n, q;
+  std::cin >> n >> q;
+
+  // Read array elements (1-indexed)
+  for (int i = 1; i <= n; i++) {
+    std::cin >> a[i];
+  }
+
+  // Build prefix XOR array
+  // pref_xor[i] = a[1] ^ a[2] ^ ... ^ a[i]
+  for (int i = 1; i <= n; i++) {
+    pref_xor[i] = pref_xor[i - 1] ^ a[i];
+  }
+
+  // Process queries
+  while (q--) {
+    int l, r;
+    std::cin >> l >> r;
+
+    // Calculate XOR of elements from index l to r
+    // Using the property: XOR(l,r) = pref_xor[r] ^ pref_xor[l-1]
+    std::cout << (pref_xor[r] ^ pref_xor[l - 1]) << '\n';
+  }
+
+  return 0;
+}
